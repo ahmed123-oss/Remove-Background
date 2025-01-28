@@ -1,4 +1,4 @@
-/* Image Wrapper */
+
 .image-wrapper {
     display: flex;
     justify-content: space-between;
@@ -256,4 +256,39 @@ h1{
 }
 html {
     scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .image-box {
+        width: 48%;
+        height: 150px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .image-box {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
 }
