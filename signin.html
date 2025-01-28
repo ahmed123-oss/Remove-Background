@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://i.ibb.co/8sNrBQ8/9dea9a0619d3b80ef15cc1ecd45d85bd-removebg-preview-1.png">
+</head>
+<body>
+  <h2>Remove Background</h2>
+  <form id="signInForm">
+    <h1>Sign In</h1>
+    <input type="email" id="signInEmail" placeholder="Enter Email" required>
+    <input type="password" id="signInPassword" placeholder="Enter Password" required>
+    <button type="submit" id="loginButton">Sign In</button>
+    <p class="error" id="error"></p>
+    <button type="button" id="googleSignInBtn">Sign in with Google</button>
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+  </form>
+
+  <div id="successMessage" class="success-message" style="display: none;">
+    Login successful! Redirecting to Home...
+  </div>
+</body>
+<script src="sin.js"></script>
+</html>
