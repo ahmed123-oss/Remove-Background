@@ -1,3 +1,23 @@
+// التحقق من حالة تسجيل الدخول عند تحميل الصفحة
+document.addEventListener("DOMContentLoaded", function() {
+    // التحقق من حالة تسجيل الدخول
+    if (localStorage.getItem("isLoggedIn")) {
+        // إذا كان المستخدم مسجلاً الدخول، نخفي روابط التسجيل وتسجيل الدخول
+        document.querySelector(".nav-links .btn").style.display = "none";  // إخفاء "Log in"
+        document.querySelector(".nav-links .primary").style.display = "none";  // إخفاء "Sign up"
+        
+        // إضافة رابط لتسجيل الخروج
+        document.querySelector(".nav-links").innerHTML += '<li><a href="#" onclick="logout()">Log out</a></li>';
+    }
+});
+
+// دالة لتسجيل الخروج
+function logout() {
+    localStorage.removeItem("isLoggedIn"); // إزالة حالة تسجيل الدخول
+    window.location.reload(); // إعادة تحميل الصفحة لتحديث الحالة
+}
+
+// الكود الخاص بتحميل الصورة وإزالة الخلفية
 const uploadButton = document.querySelector(".upload-btn");
 const apiKey = "dSt9SMUUJBhJre2qh9EzN5iF";
 
